@@ -1,0 +1,49 @@
+Arguments: 
+  /Users/carlos/.nvm/versions/node/v6.3.0/bin/node /usr/local/Cellar/yarn/1.2.1/libexec/bin/yarn.js add --dev sequelize-cli -g
+
+PATH: 
+  /Library/Frameworks/Python.framework/Versions/2.7/bin:/Users/carlos/.nvm/versions/node/v6.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin
+
+Yarn version: 
+  1.2.1
+
+Node version: 
+  6.3.0
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "app",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+      "start": "node ./bin/www"
+    },
+    "dependencies": {
+      "body-parser": "~1.18.2",
+      "cookie-parser": "~1.4.3",
+      "debug": "~2.6.9",
+      "express": "~4.15.5",
+      "jade": "~1.11.0",
+      "morgan": "~1.9.0",
+      "sequelize": "^4.17.0",
+      "serve-favicon": "~2.4.5"
+    },
+    "devDependencies": {
+      "sequelize-cli": "^3.0.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: https://registry.yarnpkg.com/body-parser: ETIMEDOUT
+      at Timeout._onTimeout (/usr/local/Cellar/yarn/1.2.1/libexec/lib/cli.js:123675:19)
+      at tryOnTimeout (timers.js:224:11)
+      at Timer.listOnTimeout (timers.js:198:5)
