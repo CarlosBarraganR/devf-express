@@ -25,6 +25,22 @@ router.post('/', (req, res, next) => {
     })
 });
 
+// router.get('/:id', (req, res, next => {
+//     let beerId = req.params.id;
+//     let beerQuery = {
+//         where: {
+//             id: beerId
+//         }
+//     }
+
+//     models.Beer.findOne(beerQuery).then((filteredBeer) => {
+//         if(!filteredBeer){res.status(404).send({error: "Not Found"})};
+//         res.status(202).send({beer:filteredBeer})
+        
+//     })
+
+// }));
+
 router.put('/:id', (req, res, next) => {
     let params = req.parameters;
     let beerParams = params.require('beer').permit('name').value();
@@ -36,7 +52,7 @@ router.put('/:id', (req, res, next) => {
     }
 
     models.Beer.findOne(beerQuery).then((beer) => {
-        if (!beer){ res.status(404).send({error: "Not Found"})}
+        if (!beer){ res.status(404).send({error: "Not Found"})} // ONE LINE IF
 
         beer.update(beerParams).then((updatedBeer) => {
             res.status(202).send({beer:updatedBeer})
