@@ -44,7 +44,7 @@ const typeDefs = `
     }
 
     type Mutation {
-        addChela(beer: NewBeer): Beer
+        addBeer(beer: NewBeer): Beer
         updateBeer(beer: UpdateBeer): Beer
         deleteBeer(beer: DeleteBeer): Beer
     }
@@ -61,7 +61,7 @@ const resolvers = {
         }
     },
     Mutation: {
-        addChela: (_,args) => {
+        addBeer: (_,args) => {
             return models.Beer.create(args.beer);
         },
         updateBeer: (_,args) => {
